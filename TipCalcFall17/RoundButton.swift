@@ -16,11 +16,5 @@ class RoundButton: UIButton {
             self.layer.cornerRadius = cornerRadius
         }
     }
-    
-    @IBInspectable var myBackgroundColor: UIColor? {
-        didSet {
-            self.backgroundColor = myBackgroundColor
-        }
-    }
 
 }
