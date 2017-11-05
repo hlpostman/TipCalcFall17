@@ -10,10 +10,15 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    lazy var mainScreenView = view
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // Debug
+        // mainScreenView?.backgroundColor = .blue
     }
 
     override func didReceiveMemoryWarning() {
