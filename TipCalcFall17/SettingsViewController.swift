@@ -28,10 +28,12 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func roundUp() {
+   
+    @IBAction func roundUp(_ sender: Any) {
         print("This function will let the user always round up or not. NOT YET IMPLEMENTED")
+
     }
-    
+
     func accessibilitySound() {
         print("This function will let the user turn on and off sound for input and results in the main view for accessibility.  NOT YET IMPLEMENTED.")
     }
