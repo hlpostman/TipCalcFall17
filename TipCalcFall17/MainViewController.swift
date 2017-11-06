@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var totalLabelTitle: UILabel!
     lazy var labelTitleDictionary = [billLabelTitle: billLabel, tipLabelTitle: tipLabel, totalLabelTitle: totalLabel]
     
+    @IBOutlet var keypadButtons: [RoundButton]!
     // General Variables
     var tipLevel = 0.20
     
@@ -141,6 +142,8 @@ class MainViewController: UIViewController {
  // Pass the selected object to the new view controller.
  let settingsViewController = segue.destination as! SettingsViewController
  settingsViewController.mainScreenView = view
+    settingsViewController.mainScreenKeypadButtons = keypadButtons
+
  }
 
 }

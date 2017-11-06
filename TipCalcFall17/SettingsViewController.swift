@@ -11,6 +11,8 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     lazy var mainScreenView = view
+    @IBOutlet weak var dummyButton: UIButton!
+    lazy var mainScreenKeypadButtons = [dummyButton]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,14 @@ class SettingsViewController: UIViewController {
     func accessibilitySound() {
         print("This function will let the user turn on and off sound for input and results in the main view for accessibility.  NOT YET IMPLEMENTED.")
     }
-
+    
+    @IBAction func changeTheme(_ sender: UIButton) {
+        for keypadButton in mainScreenKeypadButtons {
+            keypadButton!.backgroundColor = sender.backgroundColor
+            keypadButton!.titleLabel!.textColor = sender.titleLabel!.textColor!
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

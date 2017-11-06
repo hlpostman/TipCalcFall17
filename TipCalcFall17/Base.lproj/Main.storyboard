@@ -326,6 +326,19 @@
                         <outlet property="totalLabel" destination="Fvb-cZ-sIq" id="NrN-hS-tot"/>
                         <outlet property="totalLabelTitle" destination="LgG-Sl-gy7" id="fB8-Py-PBP"/>
                         <outletCollection property="billTipTotalLabels" destination="mZH-8J-ZCI" collectionClass="NSMutableArray" id="wlN-y7-tfu"/>
+                        <outletCollection property="billTipTotalLabels" destination="Fvb-cZ-sIq" collectionClass="NSMutableArray" id="f92-wS-sLC"/>
+                        <outletCollection property="billTipTotalLabels" destination="SeC-xV-GYh" collectionClass="NSMutableArray" id="LO6-Se-auU"/>
+                        <outletCollection property="keypadButtons" destination="0Kz-78-ZVJ" collectionClass="NSMutableArray" id="mhB-i9-IUW"/>
+                        <outletCollection property="keypadButtons" destination="MaM-3P-enL" collectionClass="NSMutableArray" id="v4i-Dg-Dh4"/>
+                        <outletCollection property="keypadButtons" destination="a4P-tN-e9Y" collectionClass="NSMutableArray" id="ry9-pk-wJ5"/>
+                        <outletCollection property="keypadButtons" destination="Sse-OK-Awy" collectionClass="NSMutableArray" id="Tza-LW-7p2"/>
+                        <outletCollection property="keypadButtons" destination="pSl-YF-hOM" collectionClass="NSMutableArray" id="mdC-xF-CP8"/>
+                        <outletCollection property="keypadButtons" destination="vOg-aR-YQj" collectionClass="NSMutableArray" id="dvD-lW-O2R"/>
+                        <outletCollection property="keypadButtons" destination="rm8-mv-Puz" collectionClass="NSMutableArray" id="igl-IS-vac"/>
+                        <outletCollection property="keypadButtons" destination="SDg-7R-PDE" collectionClass="NSMutableArray" id="6vS-kO-5iB"/>
+                        <outletCollection property="keypadButtons" destination="gSG-jW-x8L" collectionClass="NSMutableArray" id="766-zn-01z"/>
+                        <outletCollection property="keypadButtons" destination="cmW-NY-9Ld" collectionClass="NSMutableArray" id="9zq-qa-iHY"/>
+                        <outletCollection property="keypadButtons" destination="47c-E2-uyx" collectionClass="NSMutableArray" id="gY9-nQ-tcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -339,9 +352,66 @@
                     <view key="view" contentMode="scaleToFill" id="4If-TX-slU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LS1-ad-bhG" customClass="RoundButton" customModule="TipCalcFall17" customModuleProvider="target">
+                                <rect key="frame" x="53" y="318" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Dark">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeTheme:" destination="GYb-PU-11h" eventType="touchUpInside" id="qf9-vc-ilj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQ9-oV-jq6" customClass="RoundButton" customModule="TipCalcFall17" customModuleProvider="target">
+                                <rect key="frame" x="235" y="318" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Neon">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeTheme:" destination="GYb-PU-11h" eventType="touchUpInside" id="4In-7H-n0x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jn-9h-rM7" customClass="RoundButton" customModule="TipCalcFall17" customModuleProvider="target">
+                                <rect key="frame" x="141" y="318" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Light">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeTheme:" destination="GYb-PU-11h" eventType="touchUpInside" id="lqN-Tq-KIQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsF-Uv-Go9" userLabel="Dummy button">
+                                <rect key="frame" x="53" y="123" width="60" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="McK-my-6kL"/>
                     </view>
+                    <connections>
+                        <outlet property="dummyButton" destination="KsF-Uv-Go9" id="Fta-0W-zmW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ban-yg-mcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
