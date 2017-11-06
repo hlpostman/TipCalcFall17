@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Foundation
 
 class MainViewController: UIViewController {
 
@@ -15,6 +16,7 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var billLabel: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
     
     var tipAmount: Double {
         let bill = Double(billLabel.text ?? "") ?? 0
