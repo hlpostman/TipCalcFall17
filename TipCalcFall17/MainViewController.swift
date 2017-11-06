@@ -11,12 +11,17 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    var tipLevel = 0.20
-    
-
+    // Labels
     @IBOutlet weak var billLabelField: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    
+    // Animation
+    var labelAnimation: UISnapBehavior!
+    var labelAnimator: UIDynamicAnimator!
+    
+    // Variables
+    var tipLevel = 0.20
     
     var tipAmount: Double {
         let bill = Double(billLabelField.text ?? "") ?? 0
@@ -30,6 +35,7 @@ class MainViewController: UIViewController {
         return totalBill
     }
     
+    // Functions
     func showTip() {
         tipLabel!.text! = String(tipAmount)as String!
     }
