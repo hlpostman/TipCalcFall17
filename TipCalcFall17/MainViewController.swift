@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var billLabel: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet var billTipTotalLabels: [UILabel]!
     @IBOutlet weak var billLabelTitle: UILabel!
     @IBOutlet weak var tipLabelTitle: UILabel!
     @IBOutlet weak var totalLabelTitle: UILabel!
@@ -113,7 +114,13 @@ class MainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         // Animation
-        labelAnimator = UIDynamicAnimator(referenceView: billLabel)
+//        labelAnimator = UIDynamicAnimator(referenceView: billLabel)
+        // Set corner radius of labels not working
+        for bttLabel in billTipTotalLabels {
+            bttLabel.layer.cornerRadius = CGFloat(30)//(bttLabel.frame.height)/2
+            print(bttLabel.frame.height)
+        }
+//        billLabel.layer.cornerRadius = billLabel.frame.height/2
         
         // Maintain constraints
         self.view.layoutIfNeeded()
