@@ -256,7 +256,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="inputBill:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0QY-vl-UF7"/>
+                                    <action selector="inputDecimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5rn-ir-PjO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeC-xV-GYh" userLabel="Bill">

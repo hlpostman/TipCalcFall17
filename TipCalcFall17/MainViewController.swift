@@ -50,11 +50,21 @@ class MainViewController: UIViewController {
 
     @IBAction func inputBill(_ sender: UIButton) {
     
-        minimizeLabelTitles()
         billLabel.text = billLabel!.text! + sender.titleLabel!.text!
         showTip()
         showTotal()
         print(billLabel.text!)
+    }
+    
+    @IBAction func inputDecimal(_ sender: UIButton) {
+        if (billLabel.text?.contains("."))! {
+            print("Your bill already contains a decimal.")
+        } else {
+            billLabel.text = billLabel!.text! + sender.titleLabel!.text!
+            showTip()
+            showTotal()
+            print(billLabel.text!)
+        }
     }
     
     func deleteBillInput() {
