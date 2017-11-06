@@ -14,31 +14,42 @@ class MainViewController: UIViewController {
     var tipLevel = 0.20
     
 
-    @IBOutlet weak var billLabel: UILabel!
+    @IBOutlet weak var billLabelField: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     
     var tipAmount: Double {
-        let bill = Double(billLabel.text ?? "") ?? 0
+        let bill = Double(billLabelField.text ?? "") ?? 0
         let tip = bill * tipLevel
         return tip
     }
     
-    func showTip() {
-        tipLabel.text = String(tipAmount)
+    var totalBill: Double {
+        let bill = Double(billLabelField.text ?? "") ?? 0
+        let totalBill = bill + self.tipAmount
+        return totalBill
     }
     
+    func showTip() {
+        tipLabel!.text! = String(tipAmount)as String!
+    }
+    
+    func showTotal() {
+        totalLabel!.text! = String(totalBill) as String!
+    }
 
     @IBAction func inputBill(_ sender: UIButton) {
     
-        billLabel.text = billLabel!.text! + sender.titleLabel!.text!
-        print(billLabel.text!)
+        billLabelField.text = billLabelField!.text! + sender.titleLabel!.text!
+        showTip()
+        showTotal()
+        print(billLabelField.text!)
     }
     
     func deleteBillInput() {
-//        if "0.123456789".range(of: billLabel!.text!.endIndex as! String) != nil {
-//            let lastTyped = self.billLabel!.text!.endIndex
-//            self.billLabel!.text! = billLabel!.text![..<lastTyped] as! String
+//        if "0.123456789".range(of: billLabelField!.text!.endIndex as! String) != nil {
+//            let lastTyped = self.billLabelField!.text!.endIndex
+//            self.billLabelField!.text! = billLabelField!.text![..<lastTyped] as! String
 //        }
         print("This function will allow a user to delete input as they type the bill in case they make an error.  NOT YET IMPLEMENTED.")
     }
