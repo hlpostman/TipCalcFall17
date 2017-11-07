@@ -23,6 +23,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var tipLevelSlider: UISlider!
     @IBOutlet var keypadButtons: [RoundButton]!
+    var roundUpOn: Bool = false
     
     // General Variables
     lazy var tipLevel: Float = tipLevelSlider.value
@@ -59,7 +60,7 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func inputBill(_ sender: UIButton) {
-    
+        print(roundUpOn)
         billLabel.text = billLabel!.text! + sender.titleLabel!.text!
         showTip()
         showTotal()
@@ -120,7 +121,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         // Animation
 //        labelAnimator = UIDynamicAnimator(referenceView: billLabel)
@@ -151,6 +152,7 @@ class MainViewController: UIViewController {
  let settingsViewController = segue.destination as! SettingsViewController
  settingsViewController.mainScreenView = view
     settingsViewController.mainScreenKeypadButtons = keypadButtons
+    settingsViewController.roundUpOn = roundUpOn
 
  }
 

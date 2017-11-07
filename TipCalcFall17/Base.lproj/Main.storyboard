@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="69D-hw-bzD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Tip Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="TipCalcFall17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Tip Calculator" id="BYZ-38-t0r" customClass="MainViewController" customModule="TipCalcFall17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -398,10 +398,10 @@
             </objects>
             <point key="canvasLocation" x="1008.8" y="31.934032983508249"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="vrw-Qj-keN">
             <objects>
-                <viewController id="GYb-PU-11h" customClass="SettingsViewController" customModule="TipCalcFall17" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="GYb-PU-11h" customClass="SettingsViewController" customModule="TipCalcFall17" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4If-TX-slU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -483,7 +483,7 @@
                                 <rect key="frame" x="248" y="177" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="roundUp:" destination="GYb-PU-11h" eventType="valueChanged" id="O7C-ka-VrO"/>
+                                    <action selector="roundUp:" destination="GYb-PU-11h" eventType="valueChanged" id="Eae-Ne-VIZ"/>
                                 </connections>
                             </switch>
                         </subviews>
@@ -492,6 +492,7 @@
                     </view>
                     <connections>
                         <outlet property="dummyButton" destination="KsF-Uv-Go9" id="Fta-0W-zmW"/>
+                        <outlet property="roundUpSwitch" destination="cGe-OZ-ROq" id="vhn-eD-vGR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ban-yg-mcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
