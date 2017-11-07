@@ -21,18 +21,20 @@ class MainViewController: UIViewController {
     @IBOutlet weak var totalLabelTitle: UILabel!
     lazy var labelTitleDictionary = [billLabelTitle: billLabel, tipLabelTitle: tipLabel, totalLabelTitle: totalLabel]
     
+    @IBOutlet weak var tipLevelSlider: UISlider!
     @IBOutlet var keypadButtons: [RoundButton]!
     
     // General Variables
-    lazy var tipLevel: Float = 0.25
+    lazy var tipLevel: Float = tipLevelSlider.value
     
-    @IBAction func setTipLevel(_ sender: UISlider) {
+    @IBAction func changeTipLevel(_ sender: UISlider) {
         tipLevel = sender.value
+        showTip()
+        showTotal()
         print(tipLevel, "🌸")
     }
     var tipAmount: Float {
         let bill = Float(billLabel.text ?? "") ?? 0.0
-//        let tipLevel = tipLevelSlider.value
         let tip = bill * tipLevel
         return tip
     }

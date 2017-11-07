@@ -303,7 +303,7 @@
                                 <rect key="frame" x="87" y="584" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="setTipLevel:" destination="BYZ-38-t0r" eventType="valueChanged" id="dbp-BQ-dwe"/>
+                                    <action selector="changeTipLevel:" destination="BYZ-38-t0r" eventType="valueChanged" id="NRZ-SX-lxN"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Okay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2a-An-NNl">
@@ -351,6 +351,7 @@
                         <outlet property="billLabelTitle" destination="T15-Yg-LWa" id="hA3-Pt-Aku"/>
                         <outlet property="tipLabel" destination="mZH-8J-ZCI" id="yG7-7L-0E2"/>
                         <outlet property="tipLabelTitle" destination="32C-rb-FeU" id="ReC-Uc-V2p"/>
+                        <outlet property="tipLevelSlider" destination="Hoe-Kh-jWT" id="jJ8-6Y-b4g"/>
                         <outlet property="totalLabel" destination="Fvb-cZ-sIq" id="NrN-hS-tot"/>
                         <outlet property="totalLabelTitle" destination="LgG-Sl-gy7" id="fB8-Py-PBP"/>
                         <outletCollection property="billTipTotalLabels" destination="mZH-8J-ZCI" collectionClass="NSMutableArray" id="wlN-y7-tfu"/>
