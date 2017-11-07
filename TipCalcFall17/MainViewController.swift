@@ -51,11 +51,11 @@ class MainViewController: UIViewController {
     
     // General Functions
     func showTip() {
-        tipLabel!.text! = String(tipAmount)as String!
+        tipLabel.text = String(format: "%.2f", tipAmount)
     }
     
     func showTotal() {
-        totalLabel!.text! = String(totalBill) as String!
+        totalLabel.text = String(format: "%.2f", totalBill)
     }
 
     @IBAction func inputBill(_ sender: UIButton) {
