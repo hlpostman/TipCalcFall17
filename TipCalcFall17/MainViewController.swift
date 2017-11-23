@@ -34,9 +34,18 @@ class MainViewController: UIViewController {
         showTotal()
         print(tipLevel, "🌸")
     }
+    
+    func roundUp(_ tip: Float) -> Float {
+        // Ceiling function
+        return 400//(tip + 1).truncatingRemainder(dividingBy: 1.0)
+    }
+    
     var tipAmount: Float {
         let bill = Float(billLabel.text ?? "") ?? 0.0
-        let tip = bill * tipLevel
+        var tip = bill * tipLevel
+        if roundUpOn {
+            tip = roundUp(tip)
+        }
         return tip
     }
     
@@ -133,6 +142,8 @@ class MainViewController: UIViewController {
 //        billLabel.layer.cornerRadius = billLabel.frame.height/2
         
         // Maintain constraints
+        showTip()
+        showTotal()
         self.view.layoutIfNeeded()
     }
 

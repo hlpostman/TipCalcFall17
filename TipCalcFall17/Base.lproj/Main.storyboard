@@ -490,6 +490,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="McK-my-6kL"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dummyButton" destination="KsF-Uv-Go9" id="Fta-0W-zmW"/>
                         <outlet property="roundUpSwitch" destination="cGe-OZ-ROq" id="vhn-eD-vGR"/>

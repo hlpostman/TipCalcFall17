@@ -56,9 +56,12 @@ class SettingsViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        // This function never runs.  so the settings data isn't getting passed back
+        // to modify behavior
         print("Did run segue from svc to mvc")
         let mainViewController = segue.destination as! MainViewController
         mainViewController.roundUpOn = roundUpSwitch.isOn
